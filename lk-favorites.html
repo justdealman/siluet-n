@@ -202,54 +202,156 @@
 		<div class="wrapper__content lk-page">
 			<div class="lk-page__section">
 				<div class="lk-page__title">
-					<h1 class="b-title b-title_h2">Личный кабинет</h1>
+					<h1 class="b-title b-title_h2">Избранные товары</h1>
 				</div>
 
-				<div class="lk__body">
+				<div class="lk__body" data-tabs-container data-tabs-rebuild>
 					<nav class="lk__menu">
-						<a href="#">Личные данные</a>
-						<a href="#">Мои заказы</a>
-						<a href="#">Дисконтная карта</a>
-						<a class="active" href="#">Избранные товары</a>
+						<a href="#" data-nav="1">Личные данные</a>
+						<a href="#" data-nav="2">Мои заказы</a>
+						<a href="#" data-nav="3">Дисконтная карта</a>
+						<a class="is-active" href="#" data-nav="4">Избранные товары</a>
 					</nav>
-					<div class="lk__content">
-						<table class="table orders">
-							<thead>
-								<tr>
-									<th>Фото</th>
-									<th>Наименование</th>
-									<th>Цена, руб.</th>
-									<th>Наличие</th>
-									<th></th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="table__center">
-										<div class="orders__img">
-											<img src="pictures/orders.jpg" alt="">
+					<div class="lk__content" data-tabs-content>
+						<div class="favorites" data-tab="4">
+							<div class="favorites-table">
+								<div class="favorites-table__header">
+									<span class="favorites-table__th favorites-table__th_photo">Фото</span>
+									<span class="favorites-table__th favorites-table__th_about">Наименование</span>
+									<span class="favorites-table__th favorites-table__th_price">Цена, руб.</span>
+									<span class="favorites-table__th favorites-table__th_availability">Наличие</span>
+									<span class="favorites-table__th favorites-table__th_button"></span>
+									<span class="favorites-table__th favorites-table__th_button"></span>
+								</div>
+								<div class="favorites-table__row">
+									<div class="favorites-table__td">
+										<div class="favorites-table--photo">
+											<span><img src="./pictures/favorite-1.jpg" width="45" height="80" alt=""></span>
 										</div>
-									</td>
-									<td>
-										<div class="orders__title">
-											<p>OIL WONDERS Шампунь легкий с микро-каплями масла, 300мл</p>
-											<span>Londa</span>
+									</div>
+									<div class="favorites-table__td">
+										<div class="favorites-table__content">
+											<a href="#" class="favorites-table--title">OIL WONDERS Шампунь легкий с микро-каплями масла, 300мл</a>
+											<span class="favorites-table--brand">Londa</span>
 										</div>
-									</td>
-									<td class="table__center">1090</td>
-									<td class="table__center">
-										<span class="orders__status orders__status_stock">В наличии</span>
-									</td>
-									<td class="table__center">
-										<button class="orders__incart">В корзину</button>
-									</td>
-									<td>
-										<button class="orders__remove">Убрать</button>
-									</td>
-								</tr>
-							</tbody>	
-						</table>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--price">1090 <span>₽</span></span>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--availability favorites-table--availability_true">В наличии</span>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--basket">В корзину</button>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--remove"><span>Убрать</span></button>
+									</div>
+								</div>
+								<div class="favorites-table__row">
+									<div class="favorites-table__td">
+										<div class="favorites-table--photo">
+											<span><img src="./pictures/favorite-2.jpg" width="80" height="80" alt=""></span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<div class="favorites-table__content">
+											<a href="#" class="favorites-table--title">Краска для волос без аммиака Sense De Luxe 5/45 светлый шатен медно-красный</a>
+											<span class="favorites-table--brand">Estel</span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--price">1550 <span>₽</span></span>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--availability favorites-table--availability_false">Нет в наличии</span>
+									</div>
+									<div class="favorites-table__td">
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--remove"><span>Убрать</span></button>
+									</div>
+								</div>
+								<div class="favorites-table__row">
+									<div class="favorites-table__td">
+										<div class="favorites-table--photo">
+											<span><img src="./pictures/favorite-3.jpg" width="48" height="80" alt=""></span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<div class="favorites-table__content">
+											<a href="#" class="favorites-table--title">Шампунь Ежедневный уход с маслом арганы и лецитина, Bella Vita 250мл</a>
+											<span class="favorites-table--brand">Constant Delight</span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--price">261 <span>₽</span></span>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--availability favorites-table--availability_true">В наличии</span>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--basket">В корзину</button>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--remove"><span>Убрать</span></button>
+									</div>
+								</div>
+								<div class="favorites-table__row">
+									<div class="favorites-table__td">
+										<div class="favorites-table--photo">
+											<span><img src="./pictures/favorite-4.jpg" width="80" height="80" alt=""></span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<div class="favorites-table__content">
+											<a href="#" class="favorites-table--title">10/0 (Яркий блонд) крем-краска 60мл LC NEW</a>
+											<span class="favorites-table--brand">Londa</span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--price">419 <span>₽</span></span>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--availability favorites-table--availability_true">В наличии</span>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--basket">В корзину</button>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--remove"><span>Убрать</span></button>
+									</div>
+								</div>
+								<div class="favorites-table__row">
+									<div class="favorites-table__td">
+										<div class="favorites-table--photo">
+											<span><img src="./pictures/favorite-5.jpg" width="80" height="80" alt=""></span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<div class="favorites-table__content">
+											<a href="#" class="favorites-table--title">0.03 (желтый) Kрем-краска с коллагеном, 100мл Shot DNA</a>
+											<span class="favorites-table--brand">DNA</span>
+										</div>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--price">1550 <span>₽</span></span>
+									</div>
+									<div class="favorites-table__td">
+										<span class="favorites-table--availability favorites-table--availability_true">В наличии</span>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--basket">В корзину</button>
+									</div>
+									<div class="favorites-table__td">
+										<button class="favorites-table--remove"><span>Убрать</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="favorites__controls">
+								<button class="favorites__controls--clear"><span>Очистить список</span></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

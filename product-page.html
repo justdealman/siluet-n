@@ -215,12 +215,24 @@
 				<div class="product-page__head">
 					<div class="product-page__gallery">
 						<div class="product-slider" id="product-slider">
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-1.jpg');"></div>
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-2.jpg');"></div>
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-3.jpg');"></div>
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-1.jpg');"></div>
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-2.jpg');"></div>
-							<div class="product-slider__item" style="background-image: url('pictures/product-slider-3.jpg');"></div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-1.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-2.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-3.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-1.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-2.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
+							<div class="product-slider__item" style="background-image: url('pictures/product-slider-3.jpg');">
+								<a href="#" class="product-slider--zoom"></a>
+							</div>
 						</div>
 
 						<div class="product-slider-nav" id="product-slider-nav">
@@ -262,7 +274,7 @@
 							</div>
 							
 							<div class="b-order__flex">
-								<a href="#" class="b-button">
+								<a href="#" class="b-button" data-open="added-to-basket">
 									<svg class="b-button__icon"><use xlink:href="img/icons.svg#icon-cart" /></svg>
 									В корзину
 								</a>
@@ -684,7 +696,22 @@
 			</div>
 		</footer>
 	</div>
-
+	<div class="fade-bg"></div>
+	<div class="modal modal-basket" data-target="added-to-basket">
+		<span class="modal--close"></span>
+		<span class="modal-basket--title">Товар добавлен в корзину</span>
+		<div class="modal-basket__content">
+			<div class="modal-basket__content--photo">
+				<span><img src="./pictures/basket-added-1.jpg" width="100" height="100" alt=""></span>
+			</div>
+			<a href="#" class="modal-basket__content--title">Краска для волос без аммиака Sense De Luxe 5/45 светлый шатен медно-красный</a>
+			<span class="modal-basket__content--price">310 <span>₽</span></span>
+		</div>
+		<div class="modal-basket__controls">
+			<button class="modal-basket--button">Продолжить покупки</button>
+			<button class="modal-basket--button modal-basket--button_order">Оформить заказ</button>
+		</div>
+	</div>
 	<script src="js/libs.js"></script>
 	<script src="js/script.js"></script>
 </body>

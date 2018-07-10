@@ -209,14 +209,14 @@
 					<div class="order__lc">
 						<div class="order__group">
 							<span class="order--subtitle">Выберите способ доставки</span>
-							<div class="order-tabs">
+							<div class="order-tabs" data-tabs-container data-tabs-rebuild>
 								<div class="order-tabs__nav">
-									<a href="#" class="order-tabs__nav--link is-active"><span><i class="order-tabs--icon order-tabs--icon_1"></i>Самовывоз</span></a>
-									<a href="#" class="order-tabs__nav--link"><span><i class="order-tabs--icon order-tabs--icon_2"></i>Доставка по Алтайскому краю и Республике Алтай</span></a>
-									<a href="#" class="order-tabs__nav--link"><span><i class="order-tabs--icon order-tabs--icon_3"></i>Доставка курьером</span></a>
+									<a href="#" class="order-tabs__nav--link is-active" data-nav="1"><span><i class="order-tabs--icon order-tabs--icon_1"></i>Самовывоз</span></a>
+									<a href="#" class="order-tabs__nav--link" data-nav="2"><span><i class="order-tabs--icon order-tabs--icon_2"></i>Доставка по Алтайскому краю и Республике Алтай</span></a>
+									<a href="#" class="order-tabs__nav--link" data-nav="3"><span><i class="order-tabs--icon order-tabs--icon_3"></i>Доставка курьером</span></a>
 								</div>
-								<div class="order-tabs__container">
-									<div class="order-content">
+								<div class="order-tabs__container" data-tabs-content>
+									<div class="order-content is-opened" data-tab="1">
 										<span class="order-content--title">Заберите заказ бесплатно</span>
 										<div class="order-content__list">
 											<div class="order-content__list--item">
@@ -234,53 +234,84 @@
 											<option>пр. Космонавтов, 41</option>
 										</select>
 									</div>
+									<div class="order-content" data-tab="2">
+										<span class="order-content--title">Доставка по Алтайскому краю и Республике Алтай</span>
+									</div>
+									<div class="order-content" data-tab="3">
+										<span class="order-content--title">Доставка курьером</span>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="order__group">
 							<span class="order--subtitle">Выберите способ оплаты</span>
-							<div class="order-tabs">
+							<div class="order-tabs" data-tabs-container data-tabs-rebuild>
 								<div class="order-tabs__nav">
-									<a href="#" class="order-tabs__nav--link is-active"><span><i class="order-tabs--icon order-tabs--icon_4"></i>Онлайн</span></a>
-									<a href="#" class="order-tabs__nav--link"><span><i class="order-tabs--icon order-tabs--icon_5"></i>Оплата курьру</span></a>
-									<a href="#" class="order-tabs__nav--link"><span><i class="order-tabs--icon order-tabs--icon_6"></i>Наличный расчет</span></a>
+									<a href="#" class="order-tabs__nav--link is-active" data-nav="1"><span><i class="order-tabs--icon order-tabs--icon_4"></i>Онлайн</span></a>
+									<a href="#" class="order-tabs__nav--link" data-nav="2"><span><i class="order-tabs--icon order-tabs--icon_5"></i>Оплата курьру</span></a>
+									<a href="#" class="order-tabs__nav--link" data-nav="3"><span><i class="order-tabs--icon order-tabs--icon_6"></i>Наличный расчет</span></a>
 								</div>
-								<div class="order-tabs__container">
-									<div class="order-content">
+								<div class="order-tabs__container" data-tabs-content>
+									<div class="order-content is-opened" data-tab="1">
 										<span class="order-content--title">Онлайн платеж по банковской карте</span>
+									</div>
+									<div class="order-content" data-tab="2">
+										<span class="order-content--title">Оплата курьру</span>
+									</div>
+									<div class="order-content" data-tab="3">
+										<span class="order-content--title">Наличный расчет</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="order__group">
 							<span class="order--subtitle">Контактные данные</span>
-							<div class="order-contacts">
+							<div class="order-contacts" data-tabs-container>
 								<ul class="order-contacts__nav">
-									<li class="is-active"><a href="#">Новый покупатель</a></li>
-									<li><a href="#">Авторизация</a></li>
+									<li><a href="#" data-nav="1" class="is-active">Новый покупатель</a></li>
+									<li><a href="#" data-nav="2">Авторизация</a></li>
 								</ul>
-								<div class="order-contacts__grid">
-									<div class="order-contacts__item">
-										<input type="text" placeholder="Имя *">
+								<div class="order-contacts__tab is-opened" data-tab="1">
+									<div class="order-contacts__grid">
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Имя *">
+										</div>
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Отчество *">
+										</div>
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Фамилия *">
+										</div>
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Телефон *">
+										</div>
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Эл. почта *">
+										</div>
+										<div class="order-contacts__item">
+											<select>
+												<option disabled selected>Удобное время для звонка</option>
+												<option>10:00 - 15:00</option>
+												<option>15:00 - 20:00</option>
+											</select>
+										</div>
 									</div>
-									<div class="order-contacts__item">
-										<input type="text" placeholder="Отчество *">
-									</div>
-									<div class="order-contacts__item">
-										<input type="text" placeholder="Фамилия *">
-									</div>
-									<div class="order-contacts__item">
-										<input type="text" placeholder="Телефон *">
-									</div>
-									<div class="order-contacts__item">
-										<input type="text" placeholder="Эл. почта *">
-									</div>
-									<div class="order-contacts__item">
-										<select>
-											<option disabled selected>Удобное время для звонка</option>
-											<option>10:00 - 15:00</option>
-											<option>15:00 - 20:00</option>
-										</select>
+								</div>
+								<div class="order-contacts__tab" data-tab="2">
+									<div class="order-contacts__grid">
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Логин *">
+										</div>
+										<div class="order-contacts__item">
+											<input type="text" placeholder="Пароль *">
+										</div>
+										<div class="order-contacts__item">
+											<select>
+												<option disabled selected>Удобное время для звонка</option>
+												<option>10:00 - 15:00</option>
+												<option>15:00 - 20:00</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -205,14 +205,14 @@
 					<h1 class="b-title b-title_h2">Личный кабинет</h1>
 				</div>
 
-				<div class="lk__body">
+				<div class="lk__body" data-tabs-container data-tabs-rebuild>
 					<nav class="lk__menu">
-						<a href="#">Личные данные</a>
-						<a class="active" href="#">Мои заказы</a>
-						<a href="#">Дисконтная карта</a>
+						<a href="#" data-nav="1">Личные данные</a>
+						<a class="is-active" href="#" data-nav="2">Мои заказы</a>
+						<a href="#" data-nav="3">Дисконтная карта</a>
 					</nav>
-					<div class="lk__content">
-						<table class="table orders">
+					<div class="lk__content" data-tabs-content>
+						<table class="table orders" data-tab="2">
 							<thead>
 								<tr>
 									<th>Заказ</th>
