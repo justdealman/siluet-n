@@ -2746,10 +2746,6 @@ div.radio input {
 		right:10px;
 		top:10px;
 	}
-	.modal--close:before,
-	.modal--close:after {
-		margin-left:-9px;
-	}
 	.modal-user__controls {
 		margin-top:30px;
 	}
