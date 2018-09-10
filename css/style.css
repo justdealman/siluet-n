@@ -1423,11 +1423,10 @@ div.radio input {
 .modal--close:after {
 	content:'';
 	position:absolute;
-	left:50%;
-	top:50%;
+	left:6px;
+	top:14px;
 	width:17px;
 	height:1px;
-	margin:-1px 0 0 -8px;
 	background:#9ca6ac;
 }
 .modal--close:before {
