@@ -85,6 +85,9 @@
 :-ms-input-placeholder {
 	color:#282828;
 }
+.img-cover {
+	display:none !important;
+}
 div.checker,
 div.radio {
 	position: relative
@@ -1902,6 +1905,168 @@ div.radio input {
 .favorites__controls--clear:hover span:after {
 	border-bottom-color:transparent;
 }
+.orders__num {
+	cursor:pointer;
+}
+.orders-header.is-active td {
+	position:relative;
+	background-color:#def3f4;
+	border-bottom:1px solid #def3f4;
+}
+.orders-header.is-active .orders__num {
+	border-bottom-color:transparent;
+}
+.orders-content {
+	display:none;
+}
+.orders-content.is-opened {
+	display:table-row;
+}
+.table .orders-content td {
+	padding:0;
+}
+.orders-list {
+	position:relative;
+	z-index:5;
+	padding:25px 16px 20px;
+	margin-bottom:-1px;
+	background:#ffffff;
+	-webkit-box-shadow:0 0 13px rgba(0,0,0,0.09);
+	box-shadow:0 0 13px rgba(0,0,0,0.09);
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.orders-list * {
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.orders-list--title {
+	display:block;
+	color:#28302e;
+	font-size:20px;
+	line-height:28px;
+	font-weight:300;
+	margin:0 25px 24px;
+}
+.orders-table {
+	display:table;
+	width:100%;
+	border-top:1px solid #d9d9d9;
+}
+.orders-table__header,
+.orders-table__row {
+	display:table-row;
+}
+.orders-table__header span {
+	display:block;
+	color:#7f7f7f;
+	font-size:13px;
+	line-height:16px;
+	margin:-5px 0 -8px;
+}
+.orders-table__td {
+	display:table-cell;
+	vertical-align:top;
+	padding:16px 19px;
+	border-bottom:1px solid #d9d9d9;
+}
+.orders-table__td:first-child {
+	padding-left:7px;
+}
+.orders-table__td:last-child {
+	padding-left:17px;
+}
+.orders-table__td_num {
+	width:1%;
+	white-space:nowrap;
+}
+.orders-table__td_photo {
+	width:118px;
+}
+.orders-table__td_quantity {
+	width:18.55%;
+}
+.orders-table__td_price {
+	width:14.66%;
+}
+.orders-table--num {
+	display:block;
+	color:#231f20;
+	font-size:14px;
+	line-height:18px;
+}
+.orders-table--photo {
+	width:80px;
+	height:80px;
+	margin:-1px 0 -1px -5px;
+}
+.orders-table--title {
+	display:inline-block;
+	max-width:360px;
+	font-size:14px;
+	line-height:18px;
+}
+.table .orders-table--title {
+	color:#231f20;
+	font-size:14px;
+	text-transform:none;
+}
+.table .orders-table--title:hover {
+	text-decoration:underline;
+}
+.orders-table--quantity {
+	display:block;
+	color:#231f20;
+	font-size:15px;
+	line-height:18px;
+	text-align:center;
+}
+.orders-table--price {
+	display:block;
+	color:#494949;
+	font-size:14px;
+	line-height:18px;
+	text-align:right;
+}
+.orders-table--price span {
+	color:#aeaeae;
+}
+.orders-list__total {
+	clear:both;
+	overflow:hidden;
+	padding:29px 17px 6px 7px;
+}
+.orders-list--status {
+	display:block;
+	float:left;
+	font-size:16px;
+	line-height:18px;
+	margin:0 0 10px;
+}
+.orders-list--status strong {
+	padding-left:5px;
+}
+.orders-list--status .is-payed {
+	color:#1b97a1;
+}
+.orders-list--price {
+	display:block;
+	float:right;
+	color:#7f7f7f;
+	font-size:16px;
+	line-height:18px;
+	margin:0 0 10px;
+}
+.orders-list--price strong {
+	color:#231f20;
+	font-size:18px;
+	padding-left:12px;
+}
+.orders-list--price em {
+	color:#aeaeae;
+	font-weight:600;
+}
+/* Desktop */
 @media (max-width: 1200px) {
 	.favorites-table__th,
 	.favorites-table__td {
@@ -2319,6 +2484,7 @@ div.radio input {
 	.table.orders tbody {
 		display:block;
 		width:100%;
+		padding:10px 0 0;
 	}
 	.table.orders tr {
 		display:block;
@@ -2365,6 +2531,97 @@ div.radio input {
 	}
 	.table.orders .orders__link:after {
 		display:none;
+	}
+	.table.orders .orders-content {
+		display:none;
+	}
+	.table.orders .orders-content.is-opened {
+		display:block;
+	}
+	.orders-list {
+		padding:15px 0 10px;
+		margin:-1px 0 0;
+		-webkit-box-shadow:none;
+		box-shadow:none;
+	}
+	.table.orders .orders-content td:first-child,
+	.table.orders .orders-content td:last-child {
+		padding-top:0;
+		padding-bottom:0;
+	}
+	.orders-list--title {
+		font-size:18px;
+		line-height:24px;
+		margin:0 15px 12px;
+	}
+	.orders-table {
+		display:block;
+	}
+	.orders-table__header {
+		display:none;
+	}
+	.orders-table__row {
+		position:relative;
+		display:block;
+		min-height:91px;
+		padding:16px 0 9px 78px;
+		border-bottom:1px solid #d9d9d9
+	}
+	.orders-table__td {
+		display:block;
+		width:auto !important;
+		padding:0 !important;
+		border-bottom-width:0;
+	}
+	.orders-table--photo {
+		position:absolute;
+		left:0;
+		top:15px;
+		width:60px;
+		height:60px;
+		margin:0;
+		border:1px solid #e8e8e8;
+	}
+	.orders-table--num {
+		display:none;
+	}
+	.table .orders-table--title {
+		max-width:none;
+		padding:0;
+		margin:0 0 10px;
+		background:none;
+		border-bottom-width:0;
+	}
+	.table .orders-table--title:after {
+		display:none;
+	}
+	.orders-table--quantity,
+	.orders-table--price {
+		text-align:left;
+		margin:0 0 10px;
+	}
+	.orders-table--quantity:before {
+		content:'Кол-во: ';
+		color:#7f7f7f;
+		font-size:13px;
+	}
+	.orders-list__total {
+		padding:20px 0 0;
+	}
+	.orders-list--status {
+		float:none;
+		font-size:15px;
+	}
+	.orders-list--status strong {
+		padding-left:0;
+	}
+	.orders-list--price {
+		float:none;
+		font-size:15px;
+	}
+	.orders-list--price strong {
+		font-size:16px;
+		padding-left:0;
 	}
 	.lk-card--pic {
 		display:block;
