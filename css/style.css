@@ -2291,6 +2291,21 @@ div.radio input {
 	}
 }
 @media (max-width: 900px) {
+	.to-top {
+		position:absolute;
+		right:10px;
+		bottom:55px;
+		width:32px;
+		height:32px;
+		display:block;
+		-webkit-box-shadow:0 4px 6px 0 rgba(0,0,0,.2);
+		box-shadow:0 4px 6px 0 rgba(0,0,0,.2);
+	}
+	.to-top svg {
+		width:12px;
+		height:14px;
+		background-size:12px 14px;
+	}
 	body.is-locked {
 		overflow:hidden;
 	}
