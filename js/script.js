@@ -362,4 +362,33 @@ $(function() {
 			formatInput($(this),end);
 		});
 	});
+	
+	function openAvailability() {
+		$('.availability-drop').addClass('is-opened');
+	}
+	function closeAvailability() {
+		$('.availability-drop').removeClass('is-opened');
+	}
+	$('.b-in-stock_true .b-in-stock__link').on('click', function(e) {
+		e.preventDefault();
+		if ( !$(this).hasClass('is-active') ) {
+			openAvailability();
+			$(this).addClass('is-active');
+		} else {
+			closeAvailability();
+			$(this).removeClass('is-active');
+		}
+	});
+	$('.availability-drop--close').on('click', function() {
+		closeAvailability();
+		$('.b-in-stock__link').removeClass('is-active');
+	});
+	$(document).click(function(e) { 
+		if( !$(e.target).closest('.availability-drop').length && !$(e.target).closest('.b-in-stock__link').length ) {
+			if ( $('.availability-drop').hasClass('is-opened') ) {
+				closeAvailability();
+				$('.b-in-stock__link').removeClass('is-active');
+			}
+		}        
+	});
 });
