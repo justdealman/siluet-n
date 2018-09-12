@@ -273,4 +273,93 @@ $(function() {
 			}
 		}
 	});
+	$('.filter-price').each(function() {
+
+		var t = $(this);
+		var range = t.find('.filter-price--slider');
+		
+		var min = parseInt(range.attr('data-min')),
+			start = parseInt(range.attr('data-start')),
+			end = parseInt(range.attr('data-end')),
+			max = parseInt(range.attr('data-max')),
+			step = parseInt(range.attr('data-step'));
+
+		var minInput = t.find('.filter-price--min'),
+			maxInput = t.find('.filter-price--max');
+
+		function setPrice(e,v) {
+			e.attr('data',v);
+		}
+		function formatInput(e,v) {
+			e.val(v+' р.');
+		}
+		function unformatInput(e) {
+			e.val(e.attr('data'));
+		}
+		setPrice(minInput,start);
+		formatInput(minInput,start);
+		setPrice(maxInput,end);
+		formatInput(maxInput,end);
+
+		range.slider({
+			range: true,
+			min: min,
+			max: max,
+			values: [start, end],
+			step: step,
+			slide: function(event, ui) {
+				start = ui.values[0];
+				setPrice(minInput,start);
+				formatInput(minInput,start);
+				end = ui.values[1];
+				setPrice(maxInput,end);
+				formatInput(maxInput,end);
+			}
+		});
+
+		minInput.on('focus', function() {
+			unformatInput($(this));
+		});
+		maxInput.on('focus', function() {
+			unformatInput($(this));
+		});
+		
+		minInput.on('keyup', _.debounce(function() {
+			setPrice($(this),$(this).val());
+			start = $(this).val();
+			range.slider('option', 'values', [start, end]);
+		}, 100));
+
+		maxInput.on('keyup', _.debounce(function() {
+			setPrice($(this),$(this).val());
+			end = $(this).val();
+			range.slider('option', 'values', [start, end]);
+		}, 100));
+
+		minInput.on('blur', function() {
+			if ( $(this).attr('data') < min || $(this).attr('data') > end ) {
+				if ( $(this).attr('data') < min ) {
+					start = min
+				} else if ( $(this).attr('data') > end ) {
+					start = end
+				}
+				setPrice($(this),start);
+				range.slider('option', 'values', [start, end]);
+			}
+			formatInput($(this),start);
+		});
+
+		maxInput.on('blur', function() {
+			if ( $(this).attr('data') > max || $(this).attr('data') < start ) {
+				if ( $(this).attr('data') > max ) {
+					end = max
+				} else if ( $(this).attr('data') < start ) {
+					end = start
+				}
+				setPrice($(this),end);
+				range.slider('option', 'values', [start, end]);
+			}
+			formatInput($(this),end);
+		});
+	});
 });
