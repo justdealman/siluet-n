@@ -10,8 +10,19 @@ function setImgCover(e) {
 		});
 	});
 }
+function setImgContain(e) {
+	e.each(function() {
+		$(this).parent().css({
+			'background-image': 'url("'+$(this).attr('src')+'")',
+			'background-repeat': 'no-repeat',
+			'background-position': 'center center',
+			'background-size': 'contain'
+		});
+	});
+}
 $(function() {
 	setImgCover($('.img-cover'));
+	setImgContain($('.img-contain'));
 	var isMobile = false;
 	var justSwitched = false;
 	function detectDevice() {

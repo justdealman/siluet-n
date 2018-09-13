@@ -85,7 +85,8 @@
 :-ms-input-placeholder {
 	color:#282828;
 }
-.img-cover {
+.img-cover,
+.img-contain {
 	display:none !important;
 }
 div.checker,
@@ -2271,6 +2272,145 @@ div.radio input {
 	padding:0;
 	margin:0 0 4px;
 }
+.catalog-table {
+	display:table;
+	width:100%;
+	margin:-2px 0 48px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.catalog-table * {
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.catalog-table__row {
+	display:table-row;
+}
+.catalog-table__td {
+	display:table-cell;
+	height:145px;
+	vertical-align:top;
+	padding:17px 40px 17px 0;
+	border-bottom:1px solid #bce1e3;
+}
+.catalog-table__td:last-child {
+	padding-right:30px;
+}
+.catalog-table__td_photo {
+	width:146px;
+}
+.catalog-table__td_quantity {
+	width:123px;
+}
+.catalog-table__td_price {
+	width:13.9%;
+	white-space:nowrap;
+}
+.catalog-table__td_controls {
+	width:188px;
+}
+.catalog-table--photo {
+	width:106px;
+	height:106px;
+	margin:5px 0 -1px
+}
+.catalog-table--brand {
+	display:inline-block;
+	color:#212e2f;
+	font-size:13px;
+	line-height:16px;
+	padding:2px 9px;
+	margin:0 0 17px;
+	background:#bde1e3;
+}
+.catalog-table--title {
+	display:block;
+	max-width:320px;
+	min-height:36px;
+	color:#231f20;
+	font-size:14px;
+	line-height:18px;
+	text-decoration:none;
+	margin:0;
+}
+.catalog-table--title:hover {
+	text-decoration:underline;
+}
+.catalog-table--availability {
+	position:relative;
+	display:inline-block;
+	font-size:14px;
+	line-height:20px;
+	padding-left:16px;
+	margin:10px 0 0;
+}
+.catalog-table--availability:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:7px;
+	width:7px;
+	height:7px;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+}
+.catalog-table--availability.is-true {
+	color:#23a0a9;
+	font-weight:bold;
+}
+.catalog-table--availability.is-true:before {
+	background-color:#45a6af;
+}
+.catalog-table--availability.is-false {
+	color:#f76c86;
+}
+.catalog-table--availability.is-false:before {
+	background-color:#f76c86;
+}
+.catalog-table .quantity-e {
+	margin:31px 0;
+}
+.catalog-table--price {
+	display:block;
+	color:#494949;
+	font-size:24px;
+	line-height:30px;
+	font-weight:500;
+	font-family:'Oswald', sans-serif;
+	margin:27px 0;
+}
+.catalog-table--price span {
+	color:#aeaeae;
+	font-size:22px;
+	font-weight:normal;
+	font-family:'Segoe UI', sans-serif;
+}
+.catalog-table__add {
+	margin:15px 0 13px;
+}
+.catalog-table__add .b-button {
+	width:100%;
+}
+.catalog-table__add .b-button svg {
+	content:'';
+	display:inline-block;
+	width:16px;
+	height:19px;
+	margin:0 11px 0 0;
+	fill:#ffffff;
+}
+.catalog-table__add .b-button.is-disabled {
+	color:#bfc9ce;
+	background:#f4f4f4;
+	-webkit-box-shadow:inset 0 -2px 0 rgba(0,0,0,0.1);
+	box-shadow:inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+.catalog-table__add .b-button.is-disabled svg {
+	fill:#bfc9ce;
+}
+.catalog-table .c-product__pic {
+	margin:0 8px 8px 0;
+}
 /* Desktop */
 @media (max-width: 1200px) {
 	.favorites-table__th,
@@ -2288,6 +2428,60 @@ div.radio input {
 	}
 	.availability-drop__content {
 		padding:24px 15px 14px;
+	}
+}
+@media (max-width: 1100px) {
+	.catalog-table {
+		display:block;
+	}
+	.catalog-table__row {
+		position:relative;
+		display:block;
+		min-height:91px;
+		padding:16px 0 19px 78px;
+		border-bottom:1px solid #bce1e3;
+	}
+	.catalog-table__td {
+		display:block;
+		height:auto;
+		padding:0;
+		border-bottom-width:0;
+	}
+	.catalog-table--brand {
+		margin:0 0 10px;
+	}
+	.catalog-table--title {
+		min-height:0;
+		margin:0 0 12px;
+	}
+	.catalog-table--availability {
+		margin:0 0 15px;
+	}
+	.catalog-table--photo {
+		position:absolute;
+		left:0;
+		top:15px;
+		z-index:2;
+		width:60px;
+		height:60px;
+		margin:0;
+		border:1px solid #e8e8e8;
+	}
+	.catalog-table .quantity-e {
+		margin:0 0 15px;
+	}
+	.catalog-table--price {
+		font-size:16px;
+		line-height:20px;
+		font-weight:normal;
+		font-family:'Helvetica Neue', sans-serif;
+		margin:0 0 15px;
+	}
+	.catalog-table--price span {
+		font-size:16px;
+	}
+	.catalog-table__td_controls {
+		margin-bottom:-8px;
 	}
 }
 @media (max-width: 900px) {
@@ -2607,6 +2801,7 @@ div.radio input {
 		position:absolute;
 		left:0;
 		top:15px;
+		z-index:2;
 		width:60px;
 		height:60px;
 		margin:0;
