@@ -3536,3 +3536,6 @@ div.radio input {
 .c-product__pic-icon {
 	margin-top:-2px;
 }
+.sub-navigation {
+	z-index:101;
+}
