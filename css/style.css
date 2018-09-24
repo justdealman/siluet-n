@@ -1113,6 +1113,10 @@ div.radio input {
 	-webkit-border-radius:50%;
 	border-radius:50%;
 }
+.compare__container .button-prev.is-disabled,
+.compare__container .button-next.is-disabled {
+	display:none;
+}
 .compare__container .button-prev {
 	left:-25px;
 	background:rgba(27,151,161,0.4) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAABs0lEQVRIS6XVMU/CUBAAYNuGhYnEdOy/YGZCgi4dTBoThcXdX6LORoMTG5P8AhNmYvEXOHSsSocuhBbvmnfN8XzP94pNOhTSL3f37q7O0eGXA6/u6HV8aHrhO/w9xHZNIAKc7XY79jzvHoBXx3HOm0CEuJvNZtxqtSYijQygY1tIi6Rp2vd9PwaoNKWmRZIkGQRBUCEmyIS8A1CYIBsEIyFIeWo1UhTFneu6N1RYkQ5Gsofg/3KNODIBZGyDyJAOWS2Xy4tut/uhikTubC0ym82GURSteWH5aHDo3wilhpALhX1mNVlNp9PT0Wj0bYqER+QKiBc3BugMoC8B4THXk66a8ioacXsQ1SOLKp7P58MwDD+p6VSAXCPEPLwBe+DYYrEY9Ho9jAx7RxtVvRooKpEmx9ZZlvU7nQ7NlRKjhqxPTkSGxW+E8c7+heV5ftlut59EHdawNk5gbbyp0tSOCEVmi6n2EY+sOgQbTLfYjJh8AH9tyEaY9aql9pDThOXvY/FN0N480hQAdgWneVuW5Qt8lq5tIRnjTVwtfux4m4jkcSIIf6++sk0hGaTngyEO1nP3A+Z0ET6RT7Y2AAAAAElFTkSuQmCC') no-repeat 16px 12px;
