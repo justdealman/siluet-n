@@ -85,7 +85,7 @@ $(function() {
 		table.width(colWidth*colSize)
 	}
 	var compareSteps = 0;
-	$('.button-next').on('click', function() {
+	$(document).on('click', '.button-next', function() {
 		var table = $('.compare__table');
 		var colWidth = table.find('thead td').outerWidth();		
 		if ( Modernizr.mq('(min-width:1230px)') ) {
@@ -109,7 +109,7 @@ $(function() {
 			});
 		}
 	});
-	$('.button-prev').on('click', function() {
+	$(document).on('click', '.button-prev', function() {
 		var table = $('.compare__table');
 		var colWidth = table.find('thead td').outerWidth();
 		if ( compareSteps > 0 ) {
