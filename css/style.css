@@ -73,6 +73,15 @@
     font-weight:500;
     font-style:normal;
 }
+@font-face {
+    font-family:'Helios';
+    src:url('../fonts/helios-light.eot');
+    src:url('../fonts/helios-light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/helios-light.woff') format('woff'),
+        url('../fonts/helios-light.ttf') format('truetype');
+    font-weight:300;
+    font-style:normal;
+}
 ::-webkit-input-placeholder {
 	color:#282828;
 }
@@ -2415,6 +2424,60 @@ div.radio input {
 .catalog-table .c-product__pic {
 	margin:0 8px 8px 0;
 }
+.notfound {
+	max-width:1226px;
+	text-align:center;
+	padding:71px 20px 0;
+	margin:0 auto 100px;
+}
+.notfound--pic {
+	display:block;
+	width:100%;
+	max-width:470px;
+	height:auto;
+	margin:0 auto 63px;
+}
+.notfound p {
+	font-size:15px;
+	line-height:25px;
+	font-weight:300;
+	font-family:'Helios', sans-serif;
+	margin:0;
+}
+.notfound--button {
+	position:relative;
+	display:inline-block;
+	width:209px;
+	color:#ffffff;
+	font-size:15px;
+	line-height:20px;
+	font-weight:300;
+	font-family:'Helios', sans-serif;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:.06em;
+	padding:10px 10px 10px 34px;
+	margin:66px 0 0;
+	background-color:#7c8d97;
+	border-width:0;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	transition:background-color .2s ease;
+}
+.notfound--button:before {
+	content:'';
+	position:absolute;
+	left:20px;
+	top:50%;
+	width:8px;
+	height:13px;
+	margin-top:-7px;
+	background:url('../img/back-icon.svg') no-repeat 0 0;
+}
+.notfound--button:hover {
+	background-color:#66757d;
+}
+
 /* Desktop */
 @media (max-width: 1200px) {
 	.favorites-table__th,
@@ -3375,6 +3438,20 @@ div.radio input {
 	}
 	.favorites__controls {
 		margin:0;
+	}
+	.notfound {
+		padding:20px 15px 0;
+		margin-bottom:40px;
+	}
+	.notfound--pic {
+		margin-bottom:20px;
+	}
+	.notfound p {
+		font-size:14px;
+		line-height:22px;
+	}
+	.notfound--button {
+		margin-top:20px;
 	}
 }
 @media (max-width: 600px) {
